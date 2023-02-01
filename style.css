@@ -1,0 +1,117 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+:root{
+    --primary--clr--300: hsl(179, 62%, 43%);
+    --primary--clr--100:hsl(255, 100%, 100%);
+    --primary--clr--500: hsl(179, 62%, 60%);
+    --primary--clr--400: hsl(71, 73%, 54%);
+    --neutral--clr--100:hsl(204, 43%, 93%);
+    --neutral--clr--200: hsl(218, 22%, 67%);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--neutral--clr--100);
+    font-family: 'Karla', sans-serif;
+    color: var(--neutral--clr--100);
+
+}
+.cards{
+    
+    max-width: 700px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(100px,auto);
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 1px 1px 10px rgb(177, 175, 175);
+
+}
+.community{
+    color: var(--neutral--clr--200);
+    padding: 2.5em 3.5em;
+    background-color: var(--primary--clr--100);
+    
+    grid-column: 1/4;
+}
+.community_detail{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1/4;
+    
+}
+.community_description{
+    padding-right: 0.5em;
+    line-height: 1.5;
+}
+.heading{
+    color: var(--primary--clr--300);
+    padding-bottom: 0.5em;
+}
+
+.sub_heading{
+    color: var(--primary--clr--400);
+    font-weight: bold;
+    padding-bottom: 0.5em;
+}
+.subscription{
+    padding: 2.5em 3em;
+    
+    background-color: var(--primary--clr--300);
+}
+.about{
+    padding: 2.5em 4.5em;
+    background-color: var(--primary--clr--500);
+}
+.second_heading{
+    margin-bottom: 1em;
+}
+.price{
+    font-size: 2rem;
+    
+}
+.detail{
+    margin-top: 0.5em;
+}
+.sign_up{
+    margin-top: 1.5em;
+    
+    padding: 1.2em 0.6em ;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--primary--clr--400);
+    color: var(--neutral--clr--100);
+    font-weight: bold;
+
+}
+@media only screen and (max-width:700px){
+    .cards{
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding: 10px 30px;
+        
+    }
+    .community{
+        grid-column: 1/4;
+        grid-row: 1;
+    }
+    .subscription{
+        grid-column: 1/4;
+        grid-row: 2;
+
+    }
+    .about{
+        grid-column: 1/4;
+        grid-row: 3;
+    }
+}
+        
